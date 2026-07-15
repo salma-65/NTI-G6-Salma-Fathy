@@ -1,0 +1,50 @@
+
+//Part C
+
+//15
+for(var i =0; i<=15; i++){
+  console.log(i);
+}
+
+//16
+var j = 10;
+while(j > 1){
+    console.log(j);
+    j--;
+}
+
+//17
+var arrayOfNames = ["Sara", "Omar", "Mona", "Youssef"];
+
+for (var names of arrayOfNames){
+ console.log(names + "\n\n");
+ 
+}
+
+
+//18
+for(var i =0; i<=10; i++){
+  console.log(i);
+  if(i==6){
+    break;
+  }
+}
+
+
+//19
+for(var i =0; i<=9; i++){
+ for(var j =1; i<=3; i++){
+  console.log(i*j);
+ }
+  }
+
+  //20
+for(var i =1; i<=30; i++){
+  if(i%3 == 0){
+  continue;
+  }
+  if(i ==25){
+    break;
+  }
+  console.log(i);
+}
