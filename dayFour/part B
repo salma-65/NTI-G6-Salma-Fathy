@@ -1,0 +1,48 @@
+//part B
+//9
+var city = ["Cairo", "Giza", "October", "NewCaptial", "Alex"];
+console.log(city);
+console.log(city.length);
+
+//10
+console.log(city[0]);
+console.log(city[city.length-1]);
+
+
+//11
+city.push("Maadi");
+city.unshift("Zmaleek");
+
+//12
+city.pop();
+city.shift();
+
+
+//13
+var web =  ["HTML", "CSS", "JS", "React"];
+console.log(web.indexOf("JS"));
+console.log(web.includes("Python"));
+
+//14
+var tools = ["pen", "book", "bag"];
+colors.forEach(function (tools,index){
+    console.log(index,tools);
+    
+});
+
+//15
+var colors = ["red", "green", "blue", "yellow"];
+for(var x of colors){
+    if(x =="blue"){
+        break;
+    }
+    console.log(x);
+}
+
+//16
+var characters = ["A","B","C"];
+characters.push("D");
+characters.push("E");
+characters.shift();
+console.log(characters);
+console.log(characters.length);
