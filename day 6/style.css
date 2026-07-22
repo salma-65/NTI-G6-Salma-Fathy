@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #eef2f7;
+    padding: 35px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .1);
+}
+
+h1 {
+    background: #355fe7;
+    color: white;
+    padding: 16px 22px;
+    font-size: 26px;
+}
+
+#header {
+    font-style: normal;
+}
+
+/* the 3 main cards search, form, table */
+.searchCard,
+.formCard,
+#table {
+    background: white;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+#sectionTitle {
+    color: #355fe7;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.searchCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: end;
+}
+
+.searchCard input {
+    width: 100%;
+}
+
+#filterGrad {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    cursor: pointer;
+}
+
+#filterGrad:focus {
+    border-color: #355fe7;
+}
+
+/* form */
+.input-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    align-items: end;
+}
+
+.input-box > div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=number] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+}
+
+input[type=text]:focus,
+input[type=number]:focus {
+    border-color: #355fe7;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.radio label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#addBtn {
+    width: 140px;
+    padding: 10px 16px;
+    background: #355fe7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #2448d0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background: #f3f6fc;
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+.total {
+    margin-top: 14px;
+    text-align: center;
+    color: #355fe7;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* update / delete buttons in the table */
+.updateBtn,
+.deleteBtn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.updateBtn {
+    background: #2563eb;
+    color: white;
+    margin-right: 8px;
+}
+
+.updateBtn:hover {
+    background: #1d4ed8;
+}
+
+.deleteBtn {
+    background: #dc2626;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background: #b91c1c;
+}
+
+/* responsive for zooming*/
+@media (max-width: 1000px) {
+    .searchCard {
+        grid-template-columns: 1fr;
+    }
+
+    .input-box {
+        grid-template-columns: 1fr;
+    }
+}
