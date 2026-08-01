@@ -1,0 +1,326 @@
+/* ==========================================
+   Google Fonts
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+/* ==========================================
+   Reset
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#F8FAFC;
+
+    color:#0F172A;
+}
+
+a{
+
+    text-decoration:none;
+}
+
+button,
+input{
+
+    font-family:inherit;
+}
+
+/* ==========================================
+   Color Variables
+========================================== */
+
+:root{
+
+    --primary:#0EA5E9;
+    --secondary:#6366F1;
+
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    --text-primary:#0F172A;
+    --text-secondary:#475569;
+
+    --background:#F8FAFC;
+    --surface:#FFFFFF;
+
+    --border:#E2E8F0;
+
+    --shadow-sm:
+    0 2px 8px rgba(15,23,42,.05);
+
+    --shadow-md:
+    0 10px 30px rgba(15,23,42,.08);
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:18px;
+    --radius-xl:24px;
+    --radius-pill:999px;
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.page{
+
+    display:flex;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+}
+
+/* ==========================================
+   Panels
+========================================== */
+
+.panel{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+/* ==========================================
+   Left Panel
+========================================== */
+
+.panel--brand{
+
+    background:
+    linear-gradient(
+        165deg,
+        #1586E8 0%,
+        #6366F1 100%
+    );
+
+    color:white;
+
+    padding:32px 48px;
+
+    justify-content:space-between;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ==========================================
+   Decorative Glow
+========================================== */
+
+.panel--brand::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+        rgba(255,255,255,.15),
+        transparent 70%
+    );
+
+    bottom:-180px;
+
+    right:-120px;
+}
+
+/* ==========================================
+   Logo
+========================================== */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.brand__mark{
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:8px;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    backdrop-filter:blur(12px);
+}
+
+.brand__name{
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+/* ==========================================
+   Hero
+========================================== */
+
+.brand__content{
+
+    max-width:470px;
+
+    margin-top:auto;
+
+    margin-bottom:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.brand__headline{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:54px;
+
+    font-weight:700;
+
+    line-height:1.08;
+
+    margin-bottom:22px;
+}
+
+.brand__subtext{
+
+    width:420px;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.82);
+
+    margin-bottom:42px;
+}
+
+/* ==========================================
+   Glass Card
+========================================== */
+
+.testimonial{
+
+    width:470px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+
+    inset 0 1px 1px rgba(255,255,255,.15);
+}
+
+.testimonial__header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:14px;
+}
+
+.testimonial__avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+}
+
+.testimonial__name{
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+.testimonial__role{
+
+    font-size:12px;
+
+    color:rgba(255,255,255,.75);
+
+    margin-top:2px;
+}
+
+.testimonial__quote{
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    color:rgba(255,255,255,.88);
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.brand__footer{
+
+    font-size:12px;
+
+    color:rgba(255,255,255,.60);
+
+    position:relative;
+
+    z-index:2;
+}
