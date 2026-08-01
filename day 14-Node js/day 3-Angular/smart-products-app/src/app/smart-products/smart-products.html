@@ -1,0 +1,189 @@
+<div class="container py-4">
+
+    <h2 class="mb-4 text-center">
+        {{ userName }} Smart Products Board
+    </h2>
+
+    <div class="card mb-4">
+        <div class="card-body">
+
+            @if (isLoggedIn) {
+            <h5>Welcome {{ userName }}</h5>
+
+            <button
+                class="btn btn-danger"
+                (click)="logout()">
+                Logout
+            </button>
+            }
+
+            @else {
+
+            <h5>Please Login</h5>
+
+            <button
+                class="btn btn-success"
+                (click)="login()">
+                Login
+            </button>
+
+            }
+
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+
+            <input
+                class="form-control"
+                type="text"
+                placeholder="Search Product"
+                [(ngModel)]="searchText">
+
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+
+            <button
+                class="btn btn-secondary me-2"
+                [class.active]="status==='loading'"
+                (click)="setStatus('loading')">
+                Loading
+            </button>
+
+            <button
+                class="btn btn-success me-2"
+                [class.active]="status==='success'"
+                (click)="setStatus('success')">
+                Success
+            </button>
+
+            <button
+                class="btn btn-danger me-2"
+                [class.active]="status==='error'"
+                (click)="setStatus('error')">
+                Error
+            </button>
+
+            <button
+                class="btn btn-dark"
+                [class.active]="status==='idle'"
+                (click)="setStatus('idle')">
+                Idle
+            </button>
+
+            <hr>
+
+            @switch (status) {
+
+                @case ('loading') {
+                    <div class="alert alert-warning">
+                        Loading Products...
+                    </div>
+                }
+
+                @case ('success') {
+                    <div class="alert alert-success">
+                        Products Loaded Successfully
+                    </div>
+                }
+
+                @case ('error') {
+                    <div class="alert alert-danger">
+                        Error Loading Products
+                    </div>
+                }
+
+                @default {
+                    <div class="alert alert-secondary">
+                        No Status Selected
+                    </div>
+                }
+
+            }
+
+        </div>
+    </div>
+
+    <div class="card">
+
+        <div class="card-header d-flex justify-content-between">
+
+            <span>
+                Products ({{ filteredProducts.length }})
+            </span>
+
+            <div>
+
+                <button
+                    class="btn btn-danger btn-sm me-2"
+                    [disabled]="products.length===0"
+                    (click)="clearProducts()">
+                    Clear Products
+                </button>
+
+                <button
+                    class="btn btn-primary btn-sm"
+                    (click)="resetProducts()">
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card-body">
+
+            @for (product of filteredProducts; track product.id) {
+
+            <div class="card mb-3">
+
+                <div class="card-body">
+
+                    <h5>{{ product.name }}</h5>
+
+                    <p
+                        [style.color]="product.price>1000 ? 'red' : 'green'">
+                        Price : {{ product.price }}
+                    </p>
+
+                    <p>
+                        Category : {{ product.category }}
+                    </p>
+
+                    @if (product.inStock) {
+
+                    <span class="badge text-bg-success">
+                        In Stock
+                    </span>
+
+                    }
+
+                    @else {
+
+                    <span class="badge text-bg-danger">
+                        Out Of Stock
+                    </span>
+
+                    }
+
+                </div>
+
+            </div>
+
+            }
+
+            @empty {
+
+            <div class="alert alert-info">
+                No Products Found
+            </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</div>

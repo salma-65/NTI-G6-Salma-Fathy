@@ -1,0 +1,15 @@
+.container {
+    max-width: 900px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+button.active {
+    font-weight: bold;
+}
+
+.badge {
+    font-size: 14px;
+}
